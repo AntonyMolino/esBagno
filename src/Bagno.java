@@ -1,12 +1,13 @@
 public class Bagno {
     String genereBagno;
-    
-    public Bagno(String g){
+    Semaforo semaforo;
+    public Bagno(String g,Semaforo s){
         this.genereBagno = g;
+        this.semaforo = s;
     }
     
     
-    public synchronized void usaBagno(String nome) {
+    public  void usaBagno(String nome) {
 
         System.out.println( genereBagno + " : " + nome + " e' entrato nel bagno");
         try {
